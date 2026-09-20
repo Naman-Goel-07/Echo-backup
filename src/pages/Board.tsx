@@ -304,8 +304,7 @@
   function MyCallRow({ row, onEdit }: { row: any; onEdit: () => void }) {
     const [expanded, setExpanded] = useState(true && row.status === 'needs_info')
     const hasNote = !!row.decision_note
-    // A disclosure is still a press, so it still answers. Tight radius: a row
-    // that threw a full ring would wash over the row beneath it.
+    // A disclosure is still a press, so it still answers. Tight radius: a row  that threw a full ring would wash over the row beneath it.
     const { emit, rings } = useEcho({ tight: true })
 
     return (
